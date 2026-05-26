@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Bình chọn địa điểm du lịch công ty Blueway Vina 2026</title>
+    <!-- Chỉ import Bootstrap 1 lần -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Bình chọn địa điểm du lịch công ty Blueway Vina 2026">
+    <meta name="keywords" content="Bình chọn địa điểm du lịch công ty Blueway Vina 2026">
+    <meta property="og:site_name" content="Blueway Vina">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bình chọn địa điểm du lịch công ty Blueway Vina 2026">
+    <meta property="og:url" content="https://tungnoobn123.github.io/bluewayvina/">
+    <meta property="og:description" content="Bình chọn địa điểm du lịch công ty Blueway Vina 2026">
+    <meta property="og:image" content="https://tungnoobn123.github.io/bluewayvina/img/bl.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="https://tungnoobn123.github.io/bluewayvina/img/bl.jpg">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Fallback màu nền nếu ảnh không có */
+            background: linear-gradient(135deg, #0b2b44 0%, #1a4d6b 100%);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            padding: 1.2rem 0.8rem 2.5rem;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Thử load ảnh nếu có */
+        @media (min-width: 1px) {
+            body {
+                background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://tungnoobn123.github.io/bluewayvina/img/bl.jpg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            border-radius: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .card-body {
+            padding: 1.8rem 1.6rem;
+        }
+
+        .title-box h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFFFFF 0%, #FFE6B0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 0;
+        }
+
+        .title-box {
+            background: rgba(0, 20, 50, 0.65);
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 0.9rem 1.5rem;
+            display: inline-block;
+            margin: 0 auto 1rem auto;
+            border: 1px solid rgba(255,215,130,0.6);
+        }
+
+        header.text-center {
+            margin-bottom: 1.6rem;
+        }
+
+        label, .custom-control-label {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1E2A3E;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            border: 1px solid #cfdfed;
+            background-color: rgba(255,255,245,0.95);
+            padding: 12px 18px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: #FF8C42;
+            box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.2);
+            background-color: #fff;
+        }
+
+        .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+            background-color: #FF8C42;
+            border-color: #FF8C42;
+        }
+
+        .custom-control {
+            padding-left: 1.8rem;
+            margin-bottom: 0.7rem;
+        }
+
+        a {
+            font-weight: 600;
+            color: #1F6392;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(31,99,146,0.3);
+        }
+
+        a:hover {
+            color: #FF8C42;
+            border-bottom-color: #FF8C42;
+            text-decoration: none;
+        }
+
+        .survey-note {
+            background: #fef7e0;
+            border-left: 5px solid #FF8C42;
+            border-radius: 24px;
+            padding: 1rem 1.2rem;
+            font-size: 0.85rem;
+            margin-top: 1.6rem;
+            color: #2c3e2f;
+        }
+
+        .btn-primary {
+            background: linear-gradient(95deg, #FF8C42 0%, #FF5E2E 100%);
+            border: none;
+            border-radius: 40px;
+            padding: 12px 18px;
+            font-weight: 700;
+            font-size: 1rem;
+            width: 100%;
+            box-shadow: 0 8px 18px rgba(255, 94, 46, 0.3);
+            transition: transform 0.1s ease;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: scale(0.98);
+            background: linear-gradient(95deg, #ff7a2f 0%, #ef4c1c 100%);
+        }
+
+        .container {
+            max-width: 620px;
+        }
+
+        @media (max-width: 576px) {
+            body { padding: 0.8rem 0.5rem 1.8rem; }
+            .title-box h1 { font-size: 1.4rem; }
+            .card-body { padding: 1.4rem 1rem; }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: rgba(255,255,220,0.95);
+            font-weight: 500;
+        }
+        
+        .btn-loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="text-center">
+            <div class="title-box">
+                <h1><i class="fas fa-umbrella-beach mr-2"></i> Bình chọn địa điểm du lịch <br class="d-sm-none"> Blueway Vina 2026</h1>
+            </div>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="voteForm">
+                            <div class="form-group">
+                                <label><i class="fas fa-id-card"></i> Mã thẻ nhân viên:</label>
+                                <input type="text" class="form-control" id="cardCode" placeholder="VD: BW01234" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label><i class="fas fa-user-circle"></i> Họ và tên:</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A">
+                            </div>
+
+                            <div class="form-group">
+                                <label><i class="fas fa-users"></i> Đưa người thân đi cùng:</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="familyYes" name="bringFamily" class="custom-control-input" value="Có">
+                                    <label class="custom-control-label" for="familyYes">Có, tôi sẽ đăng ký người thân</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="familyNo" name="bringFamily" class="custom-control-input" value="Không" checked>
+                                    <label class="custom-control-label" for="familyNo">Không, chỉ riêng tôi</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group d-none" id="containerLine">
+                                <label><i class="fas fa-child"></i> Tên & tuổi người thân:</label>
+                                <input type="text" class="form-control" id="familyInfo" placeholder="VD: Trần Thị B - 12 tuổi">
+                                <small class="form-text text-muted">Nếu nhiều người, cách nhau bằng dấu phẩy</small>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label><i class="fas fa-map-marker-alt"></i> Lựa chọn hành trình yêu thích:</label>
+                                
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" id="option1" name="location" class="custom-control-input" value="FLAMINGO CÁT BÀ 2N1Đ">
+                                    <label class="custom-control-label" for="option1"> 
+                                        <i class="fas fa-file-pdf text-danger mr-1"></i> 
+                                        <a href="https://tungnoobn123.github.io/bluewayvina/img/BẮC GIANG - CÁT BÀ - FLAMINGO CÁT BÀ 2N1Đ.pdf" target="_blank">1. FLAMINGO CÁT BÀ 2N1Đ</a>
+                                    </label>
+                                </div>
+                                
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" id="option2" name="location" class="custom-control-input" value="HẠ LONG - VINPEARL 2N1Đ">
+                                    <label class="custom-control-label" for="option2">
+                                        <i class="fas fa-file-pdf text-danger mr-1"></i> 
+                                        <a href="https://tungnoobn123.github.io/bluewayvina/img/BẮC GIANG - HẠ LONG - VINPEARL 2N1Đ.pdf" target="_blank">2. HẠ LONG - VINPEARL 2N1Đ</a>
+                                    </label>
+                                </div>
+                                
+                                <div class="custom-control custom-radio mb-2">
+                                    <input type="radio" id="option3" name="location" class="custom-control-input" value="SẦM SƠN - FLC SẦM SƠN RESORT 2N1Đ">
+                                    <label class="custom-control-label" for="option3">
+                                        <i class="fas fa-file-pdf text-danger mr-1"></i> 
+                                        <a href="https://tungnoobn123.github.io/bluewayvina/img/BẮC GIANG - SẦM SƠN - FLC SẦM SƠN RESORT 2N1Đ.pdf" target="_blank">3. SẦM SƠN - FLC SẦM SƠN RESORT 2N1Đ</a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="survey-note">
+                                <i class="fas fa-info-circle mr-1" style="color:#FF8C42;"></i> 
+                                <strong>📢 Thông báo quan trọng:</strong><br>
+                                Kết quả khảo sát mang tính tham khảo để lựa chọn địa điểm du lịch hè năm 2026. 
+                                Công ty sẽ căn cứ vào phương án có tỷ lệ bình chọn cao nhất cùng điều kiện thực tế 
+                                để quyết định địa điểm tổ chức chính thức.
+                            </div>
+
+                            <button type="button" class="btn btn-primary mt-3" id="btnsave">
+                                <i class="fas fa-vote-yea mr-2"></i> GỬI BÌNH CHỌN
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <footer>
+                    <i class="far fa-registered"></i> Blueway Vina - Hành trình kết nối yêu thương 2026
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDhxnVgevg2_Mp5eFTWtgEAMDFz9Y5uGgE",
+            authDomain: "tungnoobn.firebaseapp.com",
+            projectId: "tungnoobn",
+            storageBucket: "tungnoobn.appspot.com",
+            messagingSenderId: "207168692116",
+            appId: "1:207168692116:web:903456d7ae9d13de03f981"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const familyYes = document.getElementById("familyYes");
+            const familyNo = document.getElementById("familyNo");
+            const containerLine = document.getElementById("containerLine");
+            const familyInfo = document.getElementById("familyInfo");
+            const cardCode = document.getElementById("cardCode");
+            const fullName = document.getElementById("fullName");
+            const btnsave = document.getElementById("btnsave");
+
+            function toggleFamilyFields() {
+                if (familyYes.checked) {
+                    containerLine.classList.remove("d-none");
+                } else {
+                    containerLine.classList.add("d-none");
+                    familyInfo.value = "";
+                }
+            }
+
+            familyYes.addEventListener("change", toggleFamilyFields);
+            familyNo.addEventListener("change", toggleFamilyFields);
+            toggleFamilyFields();
+
+            btnsave.addEventListener("click", async function () {
+                const code = cardCode.value.trim();
+                const name = fullName.value.trim();
+                const bringFamily = document.querySelector('input[name="bringFamily"]:checked');
+                const bringFamilyValue = bringFamily ? bringFamily.value : "Không";
+                let familyDetail = familyInfo.value.trim();
+                const selectedLocation = document.querySelector('input[name="location"]:checked');
+                const locationValue = selectedLocation ? selectedLocation.value : "";
+
+                if (!code) {
+                    Swal.fire({ icon: "warning", title: "Thiếu mã thẻ", text: "Vui lòng nhập mã thẻ nhân viên", confirmButtonColor: "#FF8C42" });
+                    return;
+                }
+                if (!name) {
+                    Swal.fire({ icon: "warning", title: "Thiếu họ tên", text: "Vui lòng nhập họ và tên", confirmButtonColor: "#FF8C42" });
+                    return;
+                }
+                if (bringFamilyValue === "Có" && !familyDetail) {
+                    Swal.fire({ icon: "warning", title: "Thiếu thông tin", text: "Vui lòng nhập tên và tuổi người thân", confirmButtonColor: "#FF8C42" });
+                    return;
+                }
+                if (!locationValue) {
+                    Swal.fire({ icon: "warning", title: "Chưa chọn địa điểm", text: "Hãy chọn 1 hành trình du lịch", confirmButtonColor: "#FF8C42" });
+                    return;
+                }
+
+                if (bringFamilyValue !== "Có") familyDetail = "";
+
+                const now = new Date();
+                const timestamp = now.getFullYear().toString() +
+                    String(now.getMonth() + 1).padStart(2, '0') +
+                    String(now.getDate()).padStart(2, '0') +
+                    String(now.getHours()).padStart(2, '0') +
+                    String(now.getMinutes()).padStart(2, '0') +
+                    String(now.getSeconds()).padStart(2, '0') +
+                    String(now.getMilliseconds()).padStart(3, '0');
+
+                btnsave.disabled = true;
+                btnsave.innerHTML = '<i class="fas fa-spinner fa-pulse mr-2"></i> Đang gửi...';
+                
+                try {
+                    await set(ref(db, "noidung1/" + timestamp), {
+                        userid: code,
+                        username: name,
+                        bringFamily: bringFamilyValue,
+                        familyInfo: familyDetail,
+                        locationText: locationValue,
+                        votedAt: now.toISOString()
+                    });
+
+                    Swal.fire({
+                        icon: "success",
+                        title: "🎉 BÌNH CHỌN THÀNH CÔNG 🎉",
+                        html: `<strong style="color:#FF5E2E;">${locationValue}</strong><br>Cảm ơn <strong>${name}</strong>!<br>Chúc bạn có chuyến đi tuyệt vời 🌟`,
+                        confirmButtonColor: "#FF8C42",
+                        timer: 4000
+                    });
+
+                    cardCode.value = "";
+                    fullName.value = "";
+                    familyNo.checked = true;
+                    toggleFamilyFields();
+                    document.querySelectorAll('input[name="location"]').forEach(r => r.checked = false);
+                    familyInfo.value = "";
+
+                } catch (error) {
+                    console.error("Firebase error:", error);
+                    Swal.fire({
+                        icon: "error",
+                        title: "Lỗi kết nối",
+                        text: "Không thể ghi dữ liệu. Vui lòng thử lại sau.",
+                        confirmButtonColor: "#FF8C42"
+                    });
+                } finally {
+                    btnsave.disabled = false;
+                    btnsave.innerHTML = '<i class="fas fa-vote-yea mr-2"></i> GỬI BÌNH CHỌN';
+                }
+            });
+
+            const links = document.querySelectorAll('a[href*=".pdf"]');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const label = link.closest('.custom-control-label');
+                    if (label && label.getAttribute('for')) {
+                        const radio = document.getElementById(label.getAttribute('for'));
+                        if (radio && !radio.checked) radio.checked = true;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>< ! - -   t r i g g e r   r e b u i l d   - - >  
+ / *   f o r c e   r e b u i l d   * /  
+ 
